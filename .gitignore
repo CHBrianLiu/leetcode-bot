@@ -213,3 +213,7 @@ cython_debug/
 
 # Azure Functions
 local.settings.json
+
+# IDEs
+.vscode
+.idea
