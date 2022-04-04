@@ -14,7 +14,7 @@ webhook_handler = linebot.WebhookHandler(config.LINE_CHANNEL_SECRET)
 @webhook_handler.add(MessageEvent, message=TextMessage)
 def handle_text_message_event(event: MessageEvent):
     # Tag message only.
-    if not line.is_tagged(event.message, config.LINE_OFFICIAL_ACCOUNT_ID):
+    if event.message.text != "選題":
         return
 
     reply_token = event.reply_token
