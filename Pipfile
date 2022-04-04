@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+line-bot-sdk = "*"
+gql = {extras = ["requests"], version = "*"}
+fastapi = "*"
+uvicorn = "*"
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+bpython = "*"
+
+[requires]
+python_version = "3.10"

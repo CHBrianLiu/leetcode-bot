@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  webhook:
+    build: .
+    environment:
+      LINE_CHANNEL_TOKEN: ${LINE_CHANNEL_TOKEN}
+      LINE_CHANNEL_SECRET: ${LINE_CHANNEL_SECRET}
+      LINE_OFFICIAL_ACCOUNT_ID: ${LINE_OFFICIAL_ACCOUNT_ID}
+      LINE_API_ENDPOINT: ${LINE_API_ENDPOINT}
+
+  line-simulator:
+    build:
+      context: https://github.com/kenakamu/LINESimulator.git
+    restart: always
+    ports:
+      - "8081:8080"
