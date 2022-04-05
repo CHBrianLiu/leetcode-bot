@@ -2,6 +2,8 @@
 
 The bot randomly picks Leetcode questions for you.
 
+![snapshot](docs/pics/intro.png)
+
 ## Usage
 
 After deploying the application and configuring the LINE official account webhook settings, your official account should
@@ -26,3 +28,7 @@ be ready to serve with following commands.
 |:----------------------|
 | `LINE_CHANNEL_TOKEN`  |
 | `LINE_CHANNEL_SECRET` |
+
+## Development
+
+We use `pipenv` to manage the dependencies. Check [development doc](docs/Development.md) for more details.
