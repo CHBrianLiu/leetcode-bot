@@ -51,8 +51,6 @@ class LeetcodeProblemDataDownloader:
             "limit": 10000,
             "skip": 0,
             "filters": {
-                # We don't need paid-only questions so far.
-                "premiumOnly": False,
                 # We perform difficulty filtering locally. For reference only.
                 # "difficulty": "EASY",
             }

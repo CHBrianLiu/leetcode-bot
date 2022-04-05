@@ -17,14 +17,22 @@ def handle_text_message_event(event: MessageEvent):
     if event.message.text != "選題":
         return
 
-    reply_token = event.reply_token
-
     # For the current version, we pick 3 easy questions. This logic should be improved in the future.
-    questions = list(filter(lambda question: question.difficulty == "Easy", cache.questions))
+    questions = list(filter(filter_questions, cache.questions))
     picked = random.sample(questions, 3)
-    reply_message = compose_message_text(picked)
 
-    line_api.reply_message(reply_token, TextMessage(text=reply_message))
+    reply_message = compose_message_text(picked)
+    line_api.reply_message(event.reply_token, TextMessage(text=reply_message))
+
+
+def filter_questions(question: leetcode.Question) -> bool:
+    """
+    The custom filtering criteria is implemented here.
+    """
+    return all([
+        not question.paidOnly,
+        question.difficulty == "Easy",
+    ])
 
 
 def compose_message_text(questions: list[leetcode.Question]):
