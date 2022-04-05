@@ -4,7 +4,6 @@ import os
 # NAME = os.environ.get("NAME", "DEFAULT")
 LINE_CHANNEL_TOKEN = os.environ.get("LINE_CHANNEL_TOKEN", "")
 LINE_CHANNEL_SECRET = os.environ.get("LINE_CHANNEL_SECRET", "")
-LINE_OFFICIAL_ACCOUNT_ID = os.environ.get("LINE_OFFICIAL_ACCOUNT_ID", "")
 # We can replace this config to test Line Messaging API locally
 LINE_API_ENDPOINT = os.environ.get("LINE_API_ENDPOINT", "https://api.line.me")
 
