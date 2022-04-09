@@ -9,9 +9,10 @@ The bot randomly picks Leetcode questions for you.
 After deploying the application and configuring the LINE official account webhook settings, your official account should
 be ready to serve with following commands.
 
-| Command | Description               |
-|---------|:--------------------------|
-| `選題`    | Pick three easy questions |
+| Command          | Description                                                                                                                                                                         |
+|------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `選題`             | Pick three easy questions                                                                                                                                                           |
+| `選題[xE][xM][xH]` | Pick questions with difficulty specified. For example, `選題1E2M3H` means 1 easy question, 2 medium questions, and 3 hard questions. Possible commands include `選題1E`, `選題3E2H`, etc. |
 
 ## Deployment
 
